@@ -8,21 +8,20 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Hello You",
       home: Material(
-        child: helloyou(),
+        child: HelloYou(),
       ),
     );
   }
 }
-class helloyou extends StatefulWidget {
+class HelloYou extends StatefulWidget {
   @override
-  _helloyouState createState() => _helloyouState();
+  _HelloYouState createState() => _HelloYouState();
 }
 
-class _helloyouState extends State<helloyou> {
-  @override
+class _HelloYouState extends State<HelloYou> {
   String result='';
   final curs=['INR','USD','GBP'];
-  String curency='dollar';
+  String curency='INR';
   TextEditingController distControl =new TextEditingController();
 TextEditingController pricecontrol =new TextEditingController();
 TextEditingController distancepercontrol =new TextEditingController();
