@@ -21,7 +21,7 @@ class helloyou extends StatefulWidget {
 class _helloyouState extends State<helloyou> {
   @override
   String result='';
-  final curs=['dollar','dolar1','dollar2'];
+  final curs=['INR','USD','GBP'];
   String curency='dollar';
   TextEditingController distControl =new TextEditingController();
 TextEditingController pricecontrol =new TextEditingController();
@@ -33,7 +33,7 @@ final double formdist=5.0;
 
     TextStyle style1 =Theme.of(context).textTheme.title;
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text("Fuel COst calculator"),)),
+      appBar: AppBar(title: Center(child: Text("Fuel Cost calculator"),)),
     body: Container(
       padding: EdgeInsets.all(20.0),
       child: Column( children: <Widget>[
@@ -54,7 +54,7 @@ final double formdist=5.0;
 Padding(
          padding: EdgeInsets.only(top: formdist, bottom: formdist),
          child:TextField(
-         decoration: InputDecoration(hintText: "Eg 124",labelText: 'Distance per unit',labelStyle: style1
+         decoration: InputDecoration(hintText: "Eg 124",labelText: 'Distance per Unit',labelStyle: style1
           , border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))),
           controller: distancepercontrol,
           keyboardType: TextInputType.number,
@@ -121,7 +121,7 @@ double dist=double.parse(distControl.text);
 double price=double.parse(pricecontrol.text);
 double dpu=double.parse(distancepercontrol.text);
 double tc=dist*price/dpu;
-String _result='Total Copst of your trip is '+tc.toStringAsFixed(2)+' '+curency;
+String _result='Total Cost of your trip is '+tc.toStringAsFixed(2)+' '+curency;
 return _result;
 }
 void _reset()
